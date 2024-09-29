@@ -1,39 +1,137 @@
-/*  your css code here. If applicable */
 :root {
-            --wrapper-border-radius: 12px;
-            --wrapper-padding: 12px;
-            --wrapper-background-color: #e0e0e0;
-            
-            /* Circle */
-            --circle-width: 30px;
-            --circle-radius: calc(var(--circle-width) / 2);
-            --circle-border-width: 4px;
-            --circle-bottom-margin: 8px;
-            --circle-font-size: 24px;
-            
-            /* Selected Circle */
-            --selected-background-color: #279600;
-            
-            /* Divider Line */
-            --divider-line-height: 4px;
-            
-            /* Product Offering */
-            --product-offering-height: 40px;
-            --product-offering-padding: 12px;
-            --product-offering-vertical-margin: 12px;
-            --product-offering-border-radius: 8px;
-            --product-offering-left-border-size: 5px;
-            
-            /* Product Colors */
-            --label-left-margin: 4px;
-            --blue-product-color: #626ee3;
-            --red-product-color: #890023;
-            --orange-product-color: #f37f1b;
-            --green-product-color: #11967e;
-            
-            /* Button */
-            --button-padding: 12px;
-            --button-font-size: 16px;
-            --button-border-radius: 8px;
-            --button-background-color: #02203c;
-        }
+    --wrapper-border-radius: 12px;
+    --wrapper-padding: 12px;
+    --wrapper-background-color: #e0e0e0;
+    
+    /* Circle */
+    --circle-width: 30px;
+    --circle-radius: calc(var(--circle-width) / 2);
+    --circle-border-width: 4px;
+    --circle-bottom-margin: 8px;
+    --circle-font-size: 24px;
+    
+    /* Selected Circle */
+    --selected-background-color: #279600;
+    
+    /* Divider Line */
+    --divider-line-height: 4px;
+    
+    /* Product Offering */
+    --product-offering-height: 40px;
+    --product-offering-padding: 12px;
+    --product-offering-vertical-margin: 12px;
+    --product-offering-border-radius: 8px;
+    --product-offering-left-border-size: 5px;
+    
+    /* Product Colors */
+    --label-left-margin: 4px;
+    --blue-product-color: #626ee3;
+    --red-product-color: #890023;
+    --orange-product-color: #f37f1b;
+    --green-product-color: #11967e;
+    
+    /* Button */
+    --button-padding: 12px;
+    --button-font-size: 16px;
+    --button-border-radius: 8px;
+    --button-background-color: #02203c;
+    --button-text-color: #ffffff;
+}
+
+/* Wrapper */
+#wrapper {
+    padding: var(--wrapper-padding);
+    border-radius: var(--wrapper-border-radius);
+    background-color: var(--wrapper-background-color);
+}
+
+/* Stepper */
+#stepper {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#stepper li {
+    text-align: center;
+    position: relative;
+}
+
+.circle {
+    width: var(--circle-width);
+    height: var(--circle-width);
+    border-radius: 50%;
+    border: var(--circle-border-width) solid black;
+    font-size: var(--circle-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--circle-bottom-margin);
+    background-color: white;
+}
+
+.selected .circle {
+    background-color: var(--selected-background-color);
+    color: white;
+}
+
+/* Divider */
+.divider {
+    height: var(--divider-line-height);
+    width: 40px;
+    background-color: black;
+    align-self: center;
+}
+
+/* Product List */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: var(--product-offering-padding);
+    margin: var(--product-offering-vertical-margin) 0;
+    height: var(--product-offering-height);
+    border-radius: var(--product-offering-border-radius);
+    background-color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-left: var(--product-offering-left-border-size) solid;
+}
+
+.blue-product {
+    color: var(--blue-product-color);
+    border-left-color: var(--blue-product-color);
+}
+
+.red-product {
+    color: var(--red-product-color);
+    border-left-color: var(--red-product-color);
+}
+
+.orange-product {
+    color: var(--orange-product-color);
+    border-left-color: var(--orange-product-color);
+}
+
+.green-product {
+    color: var(--green-product-color);
+    border-left-color: var(--green-product-color);
+}
+
+/* Button */
+#continue-btn {
+    float: right;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+}
